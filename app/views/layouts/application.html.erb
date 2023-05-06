@@ -11,9 +11,14 @@
   </head>
 
   <body>
-    <%= yield %>
-
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class='main'>
+      <%= yield %>
+    </div>
+    <div class="alert alert-dismissible bg-info"><%= notice %>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div class="alert alert-dismissible bg-warning"><%= alert %>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
   </body>
 </html>
