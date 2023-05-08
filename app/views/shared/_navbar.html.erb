@@ -6,10 +6,10 @@
     </button>
     <div class='collapse navbar-collapse' id='navbarSupportedContent'>
       <ul class='navbar-nav ms-auto mb-0'>
-        <% if @email %>
+        <% if @user %>
           <li class='nav-item dropdown navbar-dropdown-right'>
             <a class='nav-link dropdown-toggle' role='button' data-bs-toggle='dropdown' aria-expanded='false'>
-              <%= @email %>
+              <%= @user.email %>
             </a>
             <ul class='dropdown-menu navbar-dropdown-menu-right bg-secondary border-0 shadow'>
               <li><%= button_to "Déconnexion", destroy_user_session_path, method: :delete, class: 'dropdown-item' %></li>

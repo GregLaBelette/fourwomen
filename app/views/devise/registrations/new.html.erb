@@ -10,6 +10,11 @@
     </div>
 
     <div class="field form-group mb-2">
+      <%= f.label :name, 'Nom' %><br />
+      <%= f.text_field :name, autocomplete: "name", class: 'form-control' %>
+    </div>
+
+    <div class="field form-group mb-2">
       <%= f.label :password, 'Mot de passe' %>
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> charactères minimum)</em>

@@ -1,3 +1,18 @@
 <div class='container'>
+  <h1>Bonjour <%= @user.name %></h1>
 
+  <h4>Prochaines règles prévues <%= @from_now %></h4>
+
+  <% if @period_happening %>
+    <h6>Les règles sont en cours depuis 2 jours</h6>
+  <% else %>
+    <h6>Les dernières règles se sont terminées il y a 2 jours</h6>
+  <% end %>
+  <h6>La date prévue des prochaines règles est le <strong>Mardi 14 mars</strong></h6>
+
+  <% if @period_happening %>
+    <div class='btn btn-lg btn-secondary mt-4'>Fin des règles</div>
+  <% else %>
+    <div class='btn btn-lg btn-primary mt-4'>J'ai mes règles</div>
+  <% end %>
 </div>
